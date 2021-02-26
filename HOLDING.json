@@ -1,0 +1,7 @@
+{
+   "clientType": "HOLDING",
+   "inn": 123,
+   "isSanctioned": true,
+   "name": "David",
+   "isBiggest": false
+}
