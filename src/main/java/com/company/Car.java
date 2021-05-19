@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Car {
@@ -18,6 +19,7 @@ public class Car {
         this.power = power;
         this.ownerId = ownerId;
     }
+
     public Car(int carId) {
         this.carId = carId;
         this.brand = "";
@@ -30,24 +32,33 @@ public class Car {
     public int getCarId() {
         return this.carId;
     }
+
     public String getBrand() {
         return this.brand;
     }
+
     public String getModelName() {
         return this.modelName;
     }
+
     public int getMaxVelocity() {
         return this.maxVelocity;
     }
+
     public int getPower() {
         return this.power;
     }
+
     public int getOwnerId() {
         return this.ownerId;
     }
+
     public void getInfo() {
-        System.out.printf("carId : %d \t brand : %s \t modelName : %s \t maxVelocity : %d \t power : %d \t ownerId %d \n", this.carId, this.brand, this.modelName, this.maxVelocity, this.power, this.ownerId);
+        System.out.printf("carId : %d \t brand : %s \t modelName : %s \t " +
+                "maxVelocity : %d \t power : %d \t ownerId %d \n",
+                this.carId, this.brand, this.modelName, this.maxVelocity, this.power, this.ownerId);
     }
+
     @Override
     public boolean equals(Object object) {
         if (this == object)
@@ -57,8 +68,10 @@ public class Car {
         Car car = (Car) object;
         return carId == car.carId;
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(carId);
     }
+
 }
